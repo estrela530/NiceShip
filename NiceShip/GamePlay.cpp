@@ -37,11 +37,17 @@ void GamePlay::Update()
 	//•`‰æ
 	_player.Render();
 	_port.Render();
+
+	
+	if (true)
+	{
+
+	}
 	_largeFish.Render();
 	_middleFish.Render();
 	_smallFish.Render();
 
-	position += 2;
+	position += 3;
 }
 
 //	‰ð•ú

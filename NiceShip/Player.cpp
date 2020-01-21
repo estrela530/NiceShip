@@ -116,7 +116,7 @@ void Player::Render()
 		0.5,
 		_rotate,
 		_grp,
-		TRUE,
+		FALSE,
 		FALSE
 	);
 
