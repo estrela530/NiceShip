@@ -89,6 +89,11 @@ void Player::Release()
 {
 }
 
+void Player::Hit()
+{
+
+}
+
 
 //	•`‰æ
 void Player::Render()
