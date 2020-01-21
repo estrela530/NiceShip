@@ -24,6 +24,8 @@ public:
 	//当たり判定
 	virtual void Hit() = 0;
 
+	//　
+
 	//	※Tipsメンバ関数にconstを付与する事で
 	//	その関数内でのメンバ変数の変更を禁止にする
 	Vector2D Position() const { return _position; }

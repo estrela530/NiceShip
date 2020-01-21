@@ -1,2 +1,45 @@
 ﻿  GamePlay.cpp
-  NiceShip.vcxproj -> C:\NiceShip\NiceShip\Debug\NiceShip.exe
+c:\niceship\niceship\gameplay.h(27): error C2259: 'Port': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(27): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(27): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+c:\niceship\niceship\gameplay.h(30): error C2259: 'LargeFish': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(30): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(30): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+c:\niceship\niceship\gameplay.h(33): error C2259: 'MiddleFish': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(33): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(33): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+c:\niceship\niceship\gameplay.h(36): error C2259: 'SmallFish': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(36): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(36): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+  LargeFish.cpp
+  MiddleFish.cpp
+  Player.cpp
+c:\niceship\niceship\player.cpp(53): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\niceship\niceship\player.cpp(59): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\niceship\niceship\player.cpp(66): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\niceship\niceship\player.cpp(74): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+  Port.cpp
+  SmallFish.cpp
+  Special.cpp
+  WinMain.cpp
+c:\niceship\niceship\gameplay.h(27): error C2259: 'Port': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(27): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(27): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+c:\niceship\niceship\gameplay.h(30): error C2259: 'LargeFish': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(30): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(30): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+c:\niceship\niceship\gameplay.h(33): error C2259: 'MiddleFish': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(33): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(33): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+c:\niceship\niceship\gameplay.h(36): error C2259: 'SmallFish': 抽象クラスをインスタンス化できません。
+  c:\niceship\niceship\gameplay.h(36): note: 次のメンバーが原因です:
+  c:\niceship\niceship\gameplay.h(36): note: 'void GameObject::Hit(void)': は抽象型です
+  c:\niceship\niceship\gameobject.h(25): note: 'GameObject::Hit' の宣言を確認してください
+  コードを生成中...
