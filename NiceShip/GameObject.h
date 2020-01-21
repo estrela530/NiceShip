@@ -52,8 +52,8 @@ public:
 	float _radius;			//	”¼Œa
 	float _rotate;          //  ‰ñ“]
 	float _speed;         //
-	float _sin;          //  
-	float _cos;          //  
+	float _sin;           //  
+	float _cos;           //  
 
 	int maxLimit;
 	int minLimit;

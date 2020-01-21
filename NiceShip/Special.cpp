@@ -7,7 +7,7 @@ void Special::Start()
 {
 	_grp = GraphFactory::Instance().LoadGraph("img\\kirakira.png");
 	_size = Vector2D(600, 128);
-	_position = Vector2D(100, 735);
+	_position = Vector2D(0, 735);
 	_velocity = Vector2D(10, 0);
 }
 
@@ -33,7 +33,7 @@ void Special::Render()
 //	çXêV
 void Special::Update()
 {
-
+	
 	_position.x += 2;
 
 
@@ -44,6 +44,11 @@ void Special::Release()
 {
 }
 
+
+void Special::Hit()
+{
+
+}
 
 
 

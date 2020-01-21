@@ -1,5 +1,7 @@
 #include "GamePlay.h"
 #include "GraphFactory.h"
+#include "DxLib.h"
+#include <cstdio>
 
 //	初期化
 void GamePlay::Initialize()
@@ -8,10 +10,13 @@ void GamePlay::Initialize()
 	_gameImage = GraphFactory::Instance().LoadGraph("img\\Sea.png");
 	_player.Start();
 	_port.Start();
-	_largeFish.Start();
-	_middleFish.Start();
-	_smallFish.Start();
+	//_largeFish.Start();
+	//_middleFish.Start();
+	//_smallFish.Start();
+	//_special.Start();
 	position = 0;
+	seconds = 0;
+	IsSummonFlag = false;
 }
 
 //	更新
@@ -30,19 +35,467 @@ void GamePlay::Update()
 	//更新
 	_player.Update();
 	_port.Update();
-	_largeFish.Update();
-	_middleFish.Update();
-	_smallFish.Update();
 
 	//描画
 	_player.Render();
 	_port.Render();
 
-	
-	
+
+#pragma region 魚ランダム生成
+
+	seconds += 1;
+
+	if (seconds >= 3)
+	{
+		randomFish = GetRand(7);
+		IsSummonFlag = true;
+	}
+
+	if (IsSummonFlag)
+	{
+	switch (randomFish)
+	{
+	case 1:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 2)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 3)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 4)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 5)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 6)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 7)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		break;
+
+	case 2:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			randomYPos = 0;
+			IsSummonFlag = false;
+		}
+		else if (randomYPos == 2)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 3)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 4)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 5)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 6)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 7)
+		{
+			_largeFish._position.y = randomYPos * 100;
+			_largeFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		break;
+
+	case 3:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 2)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 3)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 4)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 5)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 6)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 7)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		break;
+
+	case 4:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 2)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 3)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 4)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 5)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 6)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 7)
+		{
+			_middleFish._position.y = randomYPos * 100;
+			_middleFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		break;
+
+	case 5:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 2)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 3)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 4)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 5)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 6)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 7)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		break;
+
+	case 6:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 2)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 3)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 4)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 5)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 6)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 7)
+		{
+			_smallFish._position.y = randomYPos * 100;
+			_smallFish.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		break;
+
+	case 7:
+		randomYPos = GetRand(7);
+
+		if (randomYPos == 1)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 2)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 3)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 4)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 5)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 6)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+		else if (randomYPos == 7)
+		{
+			_special._position.y = randomYPos * 100;
+			_special.Start();
+			seconds = 0;
+			IsSummonFlag = false;
+			randomYPos = 0;
+		}
+
+		break;
+	}
+	}
+#pragma endregion
+
+	_largeFish.Update();
+	_middleFish.Update();
+	_smallFish.Update();
+	_special.Update();
+
+
 	_largeFish.Render();
 	_middleFish.Render();
 	_smallFish.Render();
+	_special.Render();
 
 	_player.Hit();
 
