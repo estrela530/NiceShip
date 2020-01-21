@@ -18,6 +18,36 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GamePlay.h" />
+    <ClInclude Include="GraphFactory.h" />
+    <ClInclude Include="LargeFish.h" />
+    <ClInclude Include="MiddleFish.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Port.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SmallFish.h" />
+    <ClInclude Include="Special.h" />
+    <ClInclude Include="Title.h" />
+    <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GamePlay.cpp" />
+    <ClCompile Include="GraphFactory.cpp" />
+    <ClCompile Include="LargeFish.cpp" />
+    <ClCompile Include="MiddleFish.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Port.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SmallFish.cpp" />
+    <ClCompile Include="Special.cpp" />
+    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Vector2D.cpp" />
+    <ClCompile Include="WinMain.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{81BCD5E4-E175-4E10-8498-E3AEF147C5EC}</ProjectGuid>
