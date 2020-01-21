@@ -65,4 +65,6 @@ public:
 	VECTOR _pos;
 	VECTOR _vec;
 
+	//LargeFish L;
+
 };

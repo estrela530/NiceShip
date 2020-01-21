@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "GraphFactory.h"
 #include <cmath>
+#include"LargeFish.h"
 
 //	初期化処理
 void Player::Start()
@@ -18,9 +19,13 @@ void Player::Start()
 	_cos = 0;
 	playerPos.x = 100;
 	playerPos.y = 100;
-	_vec.x = 0;
-	_vec.y = 0;
+	_vec.x = 0; 
+	_vec.y = 0; 
 
+	playerHei = 64;  //プレイヤーの横幅
+	playerWid = 128; //プレイヤーの縦幅
+
+	
 }
 
 
@@ -50,13 +55,13 @@ void Player::Update()
 	if (key & PAD_INPUT_RIGHT)
 	{
 		//_velocity.x += 2;
-		_rotate += 0.01;
+		_rotate += 0.02;
 	}
 
 	//	左キーで右に移動
 	if (key & PAD_INPUT_LEFT)
 	{
-		_rotate -= 0.01;
+		_rotate -= 0.02;
 	}
 
 	//スペースキーが押されたら前進
@@ -64,9 +69,9 @@ void Player::Update()
 	{
 		//_velocity.y -= 2;
 		_vec.x += 0.2;
-		if (_vec.x >= 4)
+		if (_vec.x >= 5)
 		{
-			_vec.x = 4;
+			_vec.x = 5;
 		}
 	}
 	else if (CheckHitKey(KEY_INPUT_SPACE) == FALSE)
@@ -91,7 +96,13 @@ void Player::Release()
 
 void Player::Hit()
 {
-	//auto x = abs(())
+	auto x = abs((_pos.x + playerWid / 2) - ( + playerWid / 2));
+	auto y = abs((+ playerHei / 2) - ( _position.y+ playerHei / 2));
+
+	if (x < (playerWid + playerWid) / 2 && y < (playerHei + playerHei) / 2)
+	{
+		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+	}
 }
 
 
