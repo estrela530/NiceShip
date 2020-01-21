@@ -21,6 +21,9 @@ public:
 	// 解放
 	void Release()  override;
 
+	//当たり判定
+	void Hit() override;
+
 	//ボタン
 	int OnButton;
 
@@ -53,6 +56,8 @@ public:
 public:
 	//	画像ハンドル
 	int _grp;
+	int playerWid;
+	int playerHei;
 
 	Vector2D _velocity;
 	Vector2D _angle;
