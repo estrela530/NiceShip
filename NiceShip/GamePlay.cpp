@@ -45,7 +45,7 @@ void GamePlay::Update()
 
 	seconds += 1;
 
-	if (seconds >= 3)
+	if (seconds >= 60)
 	{
 		randomFish = GetRand(7);
 		IsSummonFlag = true;
