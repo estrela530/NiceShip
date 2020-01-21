@@ -1,14 +1,7 @@
-﻿  GamePlay.cpp
-c:\users\k018a1815\desktop\nship\niceship\player.h(68): error C3646: 'L': 不明なオーバーライド指定子です
-c:\users\k018a1815\desktop\nship\niceship\player.h(68): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-  Player.cpp
-c:\users\k018a1815\desktop\nship\niceship\player.h(68): error C3646: 'L': 不明なオーバーライド指定子です
-c:\users\k018a1815\desktop\nship\niceship\player.h(68): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(57): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(63): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(70): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(78): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-  WinMain.cpp
-c:\users\k018a1815\desktop\nship\niceship\player.h(68): error C3646: 'L': 不明なオーバーライド指定子です
-c:\users\k018a1815\desktop\nship\niceship\player.h(68): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-  コードを生成中...
+﻿  Player.cpp
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(31): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(32): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(65): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(71): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nship\niceship\player.cpp(142): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  NiceShip.vcxproj -> C:\Users\K018A1815\Desktop\Nship\NiceShip\x64\Debug\NiceShip.exe

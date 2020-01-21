@@ -3,6 +3,7 @@
 #include "GraphFactory.h"
 #include <cmath>
 #include"LargeFish.h"
+#include <cstdio>
 
 //	初期化処理
 void Player::Start()
@@ -22,14 +23,16 @@ void Player::Start()
 	_vec.x = 0; 
 	_vec.y = 0; 
 
-	playerHei = 128;  //プレイヤーの横幅
-	playerWid = 256; //プレイヤーの縦幅
+	playerHei = 128/2;  //プレイヤーの横幅
+	playerWid = 256/2; //プレイヤーの縦幅
 
 	maxLimit = 5;
 	minLimit = 1;
 	upSpeed = 0.2;
 	downSpeed = 0.1;
 	stop = 0;
+
+	hitFlag = FALSE;
 }
 
 
@@ -106,7 +109,7 @@ void Player::Hit()
 
 	if (x < (playerWid + la._size.x) / 2 && y < (playerHei + la._size.y) / 2)
 	{
-		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+		hitFlag = TRUE;
 	}
 }
 
@@ -135,7 +138,14 @@ void Player::Render()
 		TRUE,
 		FALSE
 	);
+	
+	DrawBox(_pos.x-70, _pos.y-70, _pos.x+70, _pos.y+70, GetColor(255, 0, 0), FALSE);
 
+	if (hitFlag)
+	{
+		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
+	}
+	
 
 	/*DrawRotaGraph
 	(

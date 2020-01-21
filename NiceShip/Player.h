@@ -56,13 +56,14 @@ public:
 public:
 	//	‰æ‘œƒnƒ“ƒhƒ‹
 	int _grp;
-	int playerWid;
-	int playerHei;
+	float playerWid;
+	float playerHei;
 	float maxLimit;
 	float minLimit;
 	float upSpeed;
 	float downSpeed;
 	float stop;
+	bool hitFlag;
 
 	Vector2D _velocity;
 	Vector2D _angle;
