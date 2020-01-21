@@ -34,6 +34,11 @@ void MiddleFish::Update()
 
 }
 
+void MiddleFish::Hit()
+{
+
+}
+
 //	‰ð•ú
 void MiddleFish::Release()
 {

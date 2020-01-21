@@ -24,6 +24,11 @@ void Port::Update()
 
 }
 
+void Port::Hit()
+{
+
+}
+
 //	‰ð•ú
 void Port::Release()
 {

@@ -21,6 +21,9 @@ public:
 	// ‰ð•ú
 	void Release()  override;
 
+	//“–‚½‚è”»’è
+	void Hit() override;
+
 	//ƒ{ƒ^ƒ“
 	int OnButton;
 

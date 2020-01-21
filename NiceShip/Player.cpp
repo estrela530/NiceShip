@@ -91,7 +91,7 @@ void Player::Release()
 
 void Player::Hit()
 {
-
+	//auto x = abs(())
 }
 
 
