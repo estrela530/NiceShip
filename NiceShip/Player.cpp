@@ -10,7 +10,7 @@ void Player::Start()
 {
 	_grp = GraphFactory::Instance().LoadGraph("img\\PlayerShip.png");
 	_size = Vector2D(64, 64);
-	_radius = 16;
+	_radius = 50;
 	_position = Vector2D(500, 500);
 	_velocity = Vector2D(0, 0);
 	_rotate = 0;
@@ -104,8 +104,8 @@ void Player::Release()
 void Player::Hit()
 {
 	LargeFish la;
-	auto x = abs((_pos.x + playerWid / 2) - (la._position.x + la._size.x / 2));
-	auto y = abs((_pos.y+ playerHei / 2) - ( la._position.y+ la._size.y / 2));
+	auto x = abs((_pos.x + _radius) - (la._position.x + _radius));
+	auto y = abs((_pos.y+ _radius) - ( la._position.y+ _radius));
 
 	if (x < (playerWid + la._size.x) / 2 && y < (playerHei + la._size.y) / 2)
 	{
@@ -139,7 +139,8 @@ void Player::Render()
 		FALSE
 	);
 	
-	DrawBox(_pos.x-70, _pos.y-70, _pos.x+70, _pos.y+70, GetColor(255, 0, 0), FALSE);
+	DrawCircle(_pos.x, _pos.y, _radius, GetColor(255, 0, 0), FALSE);
+	//DrawBox(_pos.x-70, _pos.y-40, _pos.x+70, _pos.y-40, GetColor(255, 0, 0), FALSE);
 
 	if (hitFlag)
 	{
