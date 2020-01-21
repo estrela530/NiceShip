@@ -5,6 +5,7 @@
 #include "LargeFish.h"
 #include "MiddleFish.h"
 #include "SmallFish.h"
+#include "Special.h"
 
 //ゲーム画面シーン
 class GamePlay :public Scene
@@ -35,12 +36,18 @@ private:
 	//魚C
 	SmallFish _smallFish;
 
+	//魚スペシャル
+	Special _special;
+
 	//ゲームプレイの背景
 	int _gameImage;
 
 	int position;
 
-	int Random[8];
-	 
+	int randomFish;
+	int randomYPos;
 
+	int Random[7];
+	bool IsSummonFlag;
+	int seconds;
 };
