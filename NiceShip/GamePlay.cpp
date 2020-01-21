@@ -41,7 +41,7 @@ void GamePlay::Update()
 	_middleFish.Render();
 	_smallFish.Render();
 
-	position += 10;
+	position += 2;
 }
 
 //	‰ð•ú
