@@ -24,6 +24,9 @@ public:
 	//ƒ{ƒ^ƒ“
 	int OnButton;
 
+	//“–‚½‚è”»’è
+	void Hit() override;
+
 	// ‰ð•ú
 	void UpdatePosition(bool hitX, bool hitY);
 

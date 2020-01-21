@@ -1,18 +1,2 @@
-﻿  GamePlay.cpp
-  GraphFactory.cpp
-  LargeFish.cpp
-  MiddleFish.cpp
-  Player.cpp
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(53): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(59): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(66): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nship\niceship\player.cpp(74): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-  Port.cpp
-  SceneManager.cpp
-  SmallFish.cpp
-  Special.cpp
-  Title.cpp
-  Vector2D.cpp
-  WinMain.cpp
-  コードを生成中...
+﻿  SmallFish.cpp
   NiceShip.vcxproj -> C:\Users\K018A1815\Desktop\Nship\NiceShip\x64\Debug\NiceShip.exe

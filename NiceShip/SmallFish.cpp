@@ -39,6 +39,11 @@ void SmallFish::Release()
 {
 }
 
+void SmallFish::Hit()
+{
+
+}
+
 
 
 

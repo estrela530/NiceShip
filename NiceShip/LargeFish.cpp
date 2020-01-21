@@ -39,6 +39,11 @@ void LargeFish::Update()
 
 }
 
+void LargeFish::Hit()
+{
+
+}
+
 //	‰ð•ú
 void LargeFish::Release()
 {
