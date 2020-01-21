@@ -18,41 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\GameObject.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\GamePlay.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\GraphFactory.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\LargeA.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\LargeB.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\MiddleA.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\MiddleB.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Player.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Port.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Scene.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\SceneManager.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\SmallA.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\SmallB.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Special.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Title.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Vector2D.h" />
-    <ClInclude Include="..\..\C++Ship\ShipGameC++\ShipGame\Window.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\GamePlay.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\GraphFactory.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\LargeA.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\LargeB.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\MiddleA.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\MiddleB.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\Player.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\Port.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\SceneManager.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\SmallA.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\Special.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\Title.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\Vector2D.cpp" />
-    <ClCompile Include="..\..\C++Ship\ShipGameC++\ShipGame\WinMain.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{81BCD5E4-E175-4E10-8498-E3AEF147C5EC}</ProjectGuid>
