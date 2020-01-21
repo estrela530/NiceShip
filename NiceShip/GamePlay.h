@@ -40,4 +40,7 @@ private:
 
 	int position;
 
+	int Random[8];
+	 
+
 };

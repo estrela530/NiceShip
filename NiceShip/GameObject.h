@@ -54,4 +54,9 @@ public:
 	float _speed;         //
 	float _sin;          //  
 	float _cos;          //  
+
+	int maxLimit;
+	int minLimit;
+	int upSpeed;
+	int downSpeed;
 };

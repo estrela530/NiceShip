@@ -6,7 +6,7 @@
 void LargeFish::Start()
 {
 	_grp = GraphFactory::Instance().LoadGraph("img\\fishA.png");
-	_size = Vector2D(600, 128);
+	_size = Vector2D(128, 128);
 	_position = Vector2D(100, 735);
 	_velocity = Vector2D(10, 0);
 }

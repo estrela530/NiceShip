@@ -1,8 +1,6 @@
-﻿  GamePlay.cpp
-  Player.cpp
-c:\niceship\niceship\player.cpp(53): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\niceship\niceship\player.cpp(59): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-c:\niceship\niceship\player.cpp(66): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
-c:\niceship\niceship\player.cpp(74): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-  コードを生成中...
+﻿  Player.cpp
+c:\niceship\niceship\player.cpp(30): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\niceship\niceship\player.cpp(31): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+c:\niceship\niceship\player.cpp(62): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\niceship\niceship\player.cpp(68): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
   NiceShip.vcxproj -> C:\NiceShip\NiceShip\Debug\NiceShip.exe

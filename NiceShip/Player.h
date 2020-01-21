@@ -58,6 +58,11 @@ public:
 	int _grp;
 	int playerWid;
 	int playerHei;
+	float maxLimit;
+	float minLimit;
+	float upSpeed;
+	float downSpeed;
+	float stop;
 
 	Vector2D _velocity;
 	Vector2D _angle;

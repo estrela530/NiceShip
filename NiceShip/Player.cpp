@@ -22,10 +22,14 @@ void Player::Start()
 	_vec.x = 0; 
 	_vec.y = 0; 
 
-	playerHei = 64;  //プレイヤーの横幅
-	playerWid = 128; //プレイヤーの縦幅
+	playerHei = 128;  //プレイヤーの横幅
+	playerWid = 256; //プレイヤーの縦幅
 
-	
+	maxLimit = 5;
+	minLimit = 1;
+	upSpeed = 0.2;
+	downSpeed = 0.1;
+	stop = 0;
 }
 
 
@@ -68,18 +72,18 @@ void Player::Update()
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
 		//_velocity.y -= 2;
-		_vec.x += 0.2;
-		if (_vec.x >= 5)
+		_vec.x += upSpeed;
+		if (_vec.x >= maxLimit)
 		{
-			_vec.x = 5;
+			_vec.x = maxLimit;
 		}
 	}
 	else if (CheckHitKey(KEY_INPUT_SPACE) == FALSE)
 	{
-		_vec.x -= 0.1;
-		if (_vec.x <= 0)
+		_vec.x -= downSpeed;
+		if (_vec.x <= stop)
 		{
-			_vec.x = 0;
+			_vec.x = stop;
 		}
 	}
 
@@ -96,10 +100,11 @@ void Player::Release()
 
 void Player::Hit()
 {
-	auto x = abs((_pos.x + playerWid / 2) - ( + playerWid / 2));
-	auto y = abs((+ playerHei / 2) - ( _position.y+ playerHei / 2));
+	LargeFish la;
+	auto x = abs((_pos.x + playerWid / 2) - (la._position.x + la._size.x / 2));
+	auto y = abs((_pos.y+ playerHei / 2) - ( la._position.y+ la._size.y / 2));
 
-	if (x < (playerWid + playerWid) / 2 && y < (playerHei + playerHei) / 2)
+	if (x < (playerWid + la._size.x) / 2 && y < (playerHei + la._size.y) / 2)
 	{
 		DrawString(0, 0, "当たった!", GetColor(255, 0, 0));
 	}
@@ -127,7 +132,7 @@ void Player::Render()
 		0.5,
 		_rotate,
 		_grp,
-		FALSE,
+		TRUE,
 		FALSE
 	);
 

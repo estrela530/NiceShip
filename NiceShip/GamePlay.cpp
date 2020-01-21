@@ -39,13 +39,12 @@ void GamePlay::Update()
 	_port.Render();
 
 	
-	if (true)
-	{
-
-	}
+	
 	_largeFish.Render();
 	_middleFish.Render();
 	_smallFish.Render();
+
+	_player.Hit();
 
 	position += 3;
 }
